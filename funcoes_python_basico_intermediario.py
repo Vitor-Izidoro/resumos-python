@@ -89,19 +89,3 @@ def fatorial(n):
         return n * fatorial(n - 1)
 
 print("Fatorial de 5:", fatorial(5))
-
-# ------------------------------------------------------
-# 7. FUNÇÕES ANÔNIMAS (lambda)
-# ------------------------------------------------------
-
-dobro = lambda x: x * 2
-print("Dobro de 7:", dobro(7))
-
-# Usando lambda com sorted()
-nomes = ["ana", "JOÃO", "Carlos"]
-nomes_ordenados = sorted(nomes, key=lambda nome: nome.lower())
-print("Nomes ordenados:", nomes_ordenados)
-
-# ------------------------------------------------------
-# Fim do arquivo de explicação sobre funções
-# ------------------------------------------------------
