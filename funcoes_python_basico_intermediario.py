@@ -1,6 +1,5 @@
 
 # ---------------------------------------------------------------
-# Arquivo: funcoes_python_basico_intermediario.py
 # Tema: Explicação completa sobre funções em Python (básico ao intermediário)
 # ---------------------------------------------------------------
 
