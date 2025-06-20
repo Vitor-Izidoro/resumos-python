@@ -1,24 +1,22 @@
-# resumos-python
 
+# Resumo: Teste de Mesa, Funções e Listas em Python
 
-# Resumo de Conteúdo: Teste de Mesa, Funções com `def` e Listas em Python
+## 1. Teste de Mesa
 
-##  1. Teste de Mesa
+### O que é?
+O teste de mesa é uma simulação manual da execução de um código, onde acompanhamos linha por linha a evolução das variáveis e o que o programa imprime.
 
-###  Conceito
-Teste de mesa é como **simular a execução de um programa manualmente**, acompanhando o valor das variáveis **passo a passo**.
+Ele serve para:
+- Entender melhor o funcionamento de um algoritmo.
+- Detectar erros lógicos.
+- Prever saídas com segurança.
 
-É útil para:
-- Entender como o código funciona.
-- Encontrar erros.
-- Saber exatamente o que será impresso na tela.
+### Como fazer:
+1. Identifique as variáveis usadas.
+2. Crie uma tabela com colunas para linha, variáveis e saídas.
+3. Vá preenchendo conforme o código "executa".
 
-###  Como fazer:
-1. Liste as variáveis.
-2. Monte uma tabela com colunas: linha, valores das variáveis e saída.
-3. Atualize a cada passo.
-
-###  Exemplo:
+### Exemplo:
 
 ```python
 var = 30
@@ -38,29 +36,31 @@ print("Var = ", var)
 | 30     | 20          | 10           |                 |
 | 40     | 10          | 0            |                 |
 | 50     | 0           | -10          |                 |
-| ...    | ...         | ...          | `Var = -10`     |
+| ...    | ...         | ...          | Var = -10       |
+
+Observação: o `if cont == var` nunca é verdadeiro, então o `break` não ocorre. O loop segue até o fim.
 
 ---
 
-##  2. Funções com `def`
+## 2. Funções com `def`
 
-###  Conceito
-Funções são **blocos de código reutilizáveis** com **parâmetros de entrada** e **retorno opcional**.
+### Para que servem?
+Funções são blocos de código reutilizáveis que recebem dados (parâmetros), executam tarefas e podem (ou não) retornar resultados.
 
-Vantagens:
-- Organiza o código.
-- Evita repetição.
-- Facilita manutenção.
+Por que usar funções?
+- Deixam o código mais organizado e legível.
+- Evitam repetições.
+- Facilitam manutenção e testes.
 
-###  Estrutura:
+### Estrutura básica:
 
 ```python
-def nome_da_funcao(param1, param2):
-    # comandos
-    return resultado
+def nome_funcao(parametros):
+    # instruções
+    return resultado  # opcional
 ```
 
-###  Exemplo 1 — sem retorno:
+### Exemplo 1 – sem retorno:
 
 ```python
 def imprimir_boas_vindas(nome):
@@ -69,9 +69,9 @@ def imprimir_boas_vindas(nome):
 imprimir_boas_vindas("Maria")
 ```
 
-**Saída:** `Bem-vindo(a), Maria`
+Saída: `Bem-vindo(a), Maria`
 
-###  Exemplo 2 — com retorno:
+### Exemplo 2 – com retorno:
 
 ```python
 def calcular_media(n1, n2):
@@ -81,34 +81,34 @@ media = calcular_media(8, 6)
 print("Média:", media)
 ```
 
-**Saída:** `Média: 7.0`
+Saída: `Média: 7.0`
 
 ---
 
-##  3. Listas (Vetores)
+## 3. Listas (Vetores)
 
-###  Conceito
-Listas guardam **vários dados em sequência**, acessíveis por **índices** a partir do zero.
+### O que são?
+Listas são estruturas que armazenam vários valores em sequência, acessados por índices numéricos (a partir do 0).
 
 ```python
 notas = [7.0, 8.5, 6.0]
-print(notas[0])  # 7.0
+print(notas[0])  # exibe 7.0
 ```
 
-### 🛠 Operações comuns:
+### Operações úteis:
 
-| Ação       | Código                          |
-|------------|----------------------------------|
-| Criar      | `lista = []`                    |
-| Adicionar  | `lista.append(10)`              |
-| Inserir    | `lista.insert(1, 5)`            |
-| Remover    | `lista.remove(10)`              |
-| Contar     | `lista.count(5)`                |
-| Buscar pos | `lista.index(5)`                |
-| Ordenar    | `lista.sort()`                  |
-| Percorrer  | `for i in lista:`               |
+| Ação             | Comando                          |
+|------------------|----------------------------------|
+| Criar lista      | `lista = []`                    |
+| Adicionar        | `lista.append(valor)`           |
+| Inserir em pos   | `lista.insert(índice, valor)`   |
+| Remover          | `lista.remove(valor)`           |
+| Contar repetições| `lista.count(valor)`            |
+| Achar posição    | `lista.index(valor)`            |
+| Ordenar          | `lista.sort()`                  |
+| Percorrer        | `for item in lista:`            |
 
-### 🧪 Exemplo prático:
+### Exemplo prático:
 
 ```python
 notas = []
@@ -122,7 +122,6 @@ for nota in notas:
     soma += nota
 
 media = soma / len(notas)
-
 print("Média:", media)
 
 for nota in notas:
@@ -130,12 +129,14 @@ for nota in notas:
         print("Nota acima da média:", nota)
 ```
 
+Esse código mostra como coletar dados, calcular média e identificar valores acima dela — tudo usando listas e laços.
+
 ---
 
-##  Conclusão
+## Resumo Final
 
-| Tema         | Essência                                                                  |
+| Tema         | Conceito-Chave                                                            |
 |--------------|---------------------------------------------------------------------------|
-| Teste de mesa| Simular manualmente o código, rastreando variáveis passo a passo.         |
-| Funções      | Separar tarefas em blocos, com entrada (parâmetros) e possível retorno.   |
-| Listas       | Armazenar e manipular vários dados dinamicamente por índice.              |
+| Teste de Mesa| Simular a execução do código e acompanhar o valor das variáveis.          |
+| Funções      | Reaproveitar código com parâmetros e (opcionalmente) retorno.             |
+| Listas       | Guardar vários dados de forma organizada e acessível por índices.         |
